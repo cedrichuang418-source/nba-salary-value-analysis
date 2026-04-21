@@ -1,0 +1,28 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+
+# Load data
+try:
+    salary_df = pd.read_csv("data/nba_salaries_2023.csv")
+    print("Salary data loaded successfully")
+except FileNotFoundError:
+    print("Using sample data instead")
+    salary_df = pd.DataFrame({
+        "Player": ["Player A", "Player B"],
+        "Salary": [30, 20],
+        "Points": [25, 18]
+    })
+
+# Example processing
+scaler = MinMaxScaler()
+salary_df["Normalized_Salary"] = scaler.fit_transform(salary_df[["Salary"]])
+
+# Plot
+plt.figure()
+plt.scatter(salary_df["Salary"], salary_df["Points"])
+plt.xlabel("Salary")
+plt.ylabel("Points")
+plt.title("Salary vs Performance")
+plt.show()
