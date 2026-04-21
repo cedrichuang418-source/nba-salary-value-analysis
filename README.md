@@ -2,18 +2,43 @@
 
 > Quantifying on-court value per dollar, identifying market inefficiencies, and exploring optimal salary-performance ratios.
 
-## 🔍 Overview
-This project analyzes the relationship between NBA player salaries and their on-court performance for the 2023 season. We construct a composite **Performance Score** and derive a **Value Score** (performance per $1M salary) to identify:
-- High-value players (strong performance, reasonable pay)
-- Potential bargains & overpaid players
-- Market inefficiencies across salary tiers
+Project Overview
 
-## 📊 Key Findings
-- Moderate positive correlation between salary and performance (**r = 0.51**)
-- The **>$30M salary tier** offers the best average value for money
-- Identified notable bargains (e.g., high-performing mid-tier players) and overpaid stars
+This is a simple analysis project for NBA Salary vs. Performance, focusing on evaluating whether player salaries match their on-court output.
 
-## ⚙️ Requirements
-Python 3.9+ with:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
+File Structure
+
+• nba-salary-value-analysis.ipynb: Main analysis code
+
+• nba_salaries_2023.csv: Dataset (includes adjusted salary and performance stats)
+
+How to Run
+
+1. Ensure nba_salaries_2023.csv is in the same folder as the notebook.
+
+2. Open in Jupyter Notebook/JupyterLab and run cells step-by-step.
+
+Key Features
+
+• Data preprocessing (clean missing values, standardize salary)
+
+• Calculate Points per Million to measure value for money
+
+• Visualize relationships (scatter plots, histograms)
+
+• Correlation & linear regression analysis
+
+Core Insights
+
+• Salary and performance have a moderate positive correlation.
+
+• Some low-salary players offer better value than high-salary counterparts.
+
+• The Points per Million metric helps identify undervalued players for contract decisions.
+
+Dependencies
+
+• Python 3.8+
+
+• Required packages: pandas, numpy, matplotlib, scikit-learn
+pip install pandas numpy matplotlib scikit-learn
